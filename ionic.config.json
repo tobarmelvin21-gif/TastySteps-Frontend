@@ -1,0 +1,7 @@
+{
+  "name": "tasty-steps-comensal",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
