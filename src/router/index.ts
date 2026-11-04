@@ -1,18 +1,16 @@
+// src/router/index.ts
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import type { RouteRecordRaw } from 'vue-router';
 
-import HomePage from '../views/HomePage.vue';
+import CatalogPage from '@/views/CatalogPage.vue';
+import RecipeDetailPage from '@/views/RecipeDetailPage.vue';
+import SearchPage from '@/views/SearchPage.vue';
 
 const routes: RouteRecordRaw[] = [
-  {
-    path: '/',
-    redirect: '/home',
-  },
-  {
-    path: '/home',
-    name: 'Home',
-    component: HomePage,
-  },
+  { path: '/', redirect: '/catalog' },
+  { path: '/catalog', component: CatalogPage },
+  { path: '/search', component: SearchPage },
+  { path: '/recipe/:id', component: RecipeDetailPage },
 ];
 
 const router = createRouter({
